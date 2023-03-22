@@ -6,7 +6,6 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 
 function Header() {
-  const searchBtn = clsx('search-btn');
   return (
     <header className={clsx(styles.wrapper)}>
       <div className={clsx(styles.inner)}>
@@ -19,7 +18,7 @@ function Header() {
             <FontAwesomeIcon icon={faCircleXmark}/>
           </button>
           <FontAwesomeIcon icon={faSpinner} className={clsx(styles.loading)}/>
-          <button className={searchBtn}>
+          <button className={clsx(styles['search-btn'])}>
             <FontAwesomeIcon icon={faMagnifyingGlass}/>
           </button>
         </div>
