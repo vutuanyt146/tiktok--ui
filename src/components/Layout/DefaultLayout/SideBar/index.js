@@ -1,5 +1,12 @@
+import styles from './SideBar.module.scss'
+import clsx from 'clsx';
+
 function SideBar() {
-  return <h2>SideBar</h2>
+  return (
+    <div className={clsx(styles.wrapper)}>
+      SideBar
+    </div>
+  )
 }
 
 export default SideBar;
