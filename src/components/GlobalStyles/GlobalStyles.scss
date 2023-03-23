@@ -4,11 +4,15 @@
 :root {
   --primary: #fe2c55;
   --black: #000;
+  --white: #fff;
   --text-color: #222;
 
   // DefaultLayout
   --default-layout-header-height: 60px;
   --default-layout-width: 1150px;
+
+  // SideBar
+  --sidebar-width: 356px;
 }
 
 * {
@@ -22,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'IBM Plex Sans', SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;

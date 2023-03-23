@@ -6,13 +6,13 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 function AccountItem() {
   return ( 
     <div className={clsx(styles.wrapper)}>
-      <img src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-aiso/65d3c6b1d1e205c75536ccf1f26d552d~c5_300x300.webp?x-expires=1679637600&x-signature=q6%2BiGaDq0IObA5yg8YDu1KP3AtY%3D" alt="Anh" className={clsx(styles.avatar)} />
+      <img src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/b80dc484b4dcc01866c576da8981176f~c5_100x100.jpeg?x-expires=1679716800&x-signature=vNal7MiMqHMLuo3wyaQVQ%2FWmK20%3D" alt="Anh" className={clsx(styles.avatar)} />
       <div className={clsx(styles.info)}>
         <p className={clsx(styles.name)}>
-          <span>Nguyen Van A</span>
+          <span>ngthuu02</span>
           <FontAwesomeIcon icon={faCheckCircle} className={clsx(styles.check)}/>
         </p>
-        <span className={clsx(styles.username)}>nguyenvana</span>
+        <span className={clsx(styles.username)}>Nguyễn Thu</span>
       </div>
     </div>
   );
