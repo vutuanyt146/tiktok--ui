@@ -1,0 +1,16 @@
+.menu-list {
+  width: 224px;
+
+  .menu-item {
+    margin-left: 0 !important;
+  }
+}
+
+.menu-item {
+  width: 100%;
+  justify-content: left;
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
+}

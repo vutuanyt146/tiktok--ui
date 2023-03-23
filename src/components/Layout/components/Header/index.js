@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus, faEarthAsia, faCircleQuestion, faKeyboard } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
 
@@ -10,14 +10,31 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
+
+const MENU_ITEM = [
+  {
+    icon: <FontAwesomeIcon icon={faEarthAsia}/>,
+    title: 'English',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleQuestion}/>,
+    title: 'Feedback and help',
+    to: '/feedback',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard}/>,
+    title: 'Keyboard shortcuts',
+  },
+]
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() =>{
     setTimeout(() => {
-      setSearchResult([1, 2, 3]);
-    }, 3000)
+      setSearchResult([]);
+    }, 0)
   }, [])
 
   return (
@@ -62,8 +79,13 @@ function Header() {
 
         <div className={clsx(styles.actions)}>
           <Button type='upload' leftIcon={<FontAwesomeIcon icon={faPlus}/>}>Upload</Button>
-          <Button type='primary' >Log in</Button>
-          <div className={clsx(styles.more)}><img src={images.more} alt='More'/></div>
+          <Button type='primary'>Log in</Button>
+
+          <Menu
+            items={MENU_ITEM}
+          >
+            <div className={clsx(styles.more)}><img src={images.more} alt='More'/></div>
+          </Menu>
         </div>
       </div>
     </header>

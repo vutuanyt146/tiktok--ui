@@ -30,7 +30,7 @@ function Button({ to, href, children, type, size, className, leftIcon, rightIcon
     styles.wrapper, 
     styles[type], 
     styles[size], 
-    styles[className],
+    className,
   );
 
   return ( 
