@@ -11,11 +11,25 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { faEnvelopeOpen, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 
 const MENU_ITEM = [
   {
     icon: <FontAwesomeIcon icon={faEarthAsia}/>,
     title: 'English',
+    children: {
+      data: [
+        {
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          code: 'en',
+          title: 'English'
+        }
+      ],
+      title: 'Language'
+    }
   },
   {
     icon: <FontAwesomeIcon icon={faCircleQuestion}/>,
@@ -36,6 +50,8 @@ function Header() {
       setSearchResult([]);
     }, 0)
   }, [])
+
+  const currentUser = true;
 
   return (
     <header className={clsx(styles.wrapper)}>
@@ -78,14 +94,31 @@ function Header() {
         </Tippy>
 
         <div className={clsx(styles.actions)}>
-          <Button type='upload' leftIcon={<FontAwesomeIcon icon={faPlus}/>}>Upload</Button>
-          <Button type='primary'>Log in</Button>
+          {currentUser ? (
+            <>
+              <Button type='upload' leftIcon={<FontAwesomeIcon icon={faPlus}/>}>Upload</Button>
+              <Button size='mini' leftIcon={<FontAwesomeIcon icon={faPaperPlane}/>}></Button>
+              <Button size='mini' leftIcon={<FontAwesomeIcon icon={faEnvelopeOpen}/>}></Button>
 
-          <Menu
-            items={MENU_ITEM}
-          >
-            <div className={clsx(styles.more)}><img src={images.more} alt='More'/></div>
-          </Menu>
+              <Menu
+                items={MENU_ITEM}
+              >
+                <img src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/b80dc484b4dcc01866c576da8981176f~c5_100x100.jpeg?x-expires=1679716800&x-signature=vNal7MiMqHMLuo3wyaQVQ%2FWmK20%3D" alt="Anh" className={clsx(styles['user-avatar'])} />
+              </Menu>
+            </>
+          ) :
+          (
+            <>
+              <Button type='upload' leftIcon={<FontAwesomeIcon icon={faPlus}/>}>Upload</Button>
+              <Button type='primary'>Log in</Button>
+
+              <Menu
+                items={MENU_ITEM}
+              >
+                <div className={clsx(styles.more)}><img src={images.more} alt='More'/></div>
+              </Menu>
+            </>
+          )}
         </div>
       </div>
     </header>

@@ -101,7 +101,7 @@
   }
 }
 .actions {
-  min-width: 274px;
+  min-width: 265px;
   display: flex;
   align-items: center;
 }
@@ -112,4 +112,16 @@
   margin-left: 16px;
   padding: 0 4px;
   cursor: pointer;
+}
+
+// User
+.current-user {
+  display: flex;
+}
+
+.user-avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-left: 16px;
 }
