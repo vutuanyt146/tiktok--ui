@@ -1,16 +1,17 @@
 .wrapper {
-  font-weight: 700;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
   min-width: 100px;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 4px;
+  line-height: 22px;
   cursor: pointer;
   background-color: var(--white);
   border: 1px solid transparent;
-  font-family: 'ProximaNova', 'Arial', 'Tahoma', 'PingFangSC', 'sans-serif';
+  font-family: ProximaNova, sans-serif;
   user-select: none;
 
   + .wrapper {
@@ -22,6 +23,7 @@
 .primary {
   color: var(--white);
   background-color: var(--primary);
+  font-weight: 700;
 
   &:hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
@@ -40,6 +42,7 @@
 .upload {
   border: 1px solid rgba(22, 24, 35, 0.12);
   color: var(--black);
+  border-radius: 2px;
 
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
@@ -76,7 +79,7 @@
 .mini {
   max-width: 20px;
   min-width: 30px;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .small {
@@ -99,6 +102,7 @@
 }
 
 .icon {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   width: 20px;
 }

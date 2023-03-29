@@ -47,6 +47,9 @@
     font-size: 1.6rem;
     background-color: transparent;
     caret-color: var(--primary);
+    font-family: ProximaNova;
+    font-weight: 400;
+    margin-left: -1.5px;
   }
 
   input:not(:placeholder-shown) ~ .search-btn {
@@ -56,10 +59,10 @@
   &::after {
     content: '';
     position: absolute;
-    top: var(--search-top-space);
-    right: var(--search-btn-width);
+    top: calc(var(--search-top-space) - 2px);
+    right: calc(var(--search-btn-width) - 1px);
     width: 1px;
-    height: calc(100% - var(--search-top-space) * 2);
+    height: calc(100% - var(--search-top-space) * 2 + 2px);
     background-color: rgba(22, 24, 35, 0.12);
   }
 
@@ -90,6 +93,7 @@
   border-bottom-right-radius: var(--search-border-radius);
   font-size: 1.8rem;
   color: rgba(22, 24, 35, 0.34);
+  padding: 9px 16px 11px 13px;
 
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
@@ -101,12 +105,14 @@
   }
 }
 .actions {
-  min-width: 265px;
   display: flex;
   align-items: center;
 
   .icon {
-    padding-left: 16px;
+    padding-left: 14px;
+    padding-top: 4px;
+    margin-right: -1px;
+    margin-left: 1px;
   }
 }
 
@@ -127,5 +133,5 @@
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  margin-left: 16px;
+  margin-left: 24px;
 }
