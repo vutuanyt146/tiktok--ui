@@ -104,6 +104,10 @@
   min-width: 265px;
   display: flex;
   align-items: center;
+
+  .icon {
+    padding-left: 16px;
+  }
 }
 
 .more {

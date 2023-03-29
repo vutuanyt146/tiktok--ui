@@ -44,3 +44,24 @@ a[href] {
   text-decoration: none;
   color: var(--text-color);
 }
+
+// Custom Tippy Tooltip
+body {
+  .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: rgba(84, 84, 84, 0.92);
+  }
+
+  .tippy-content {
+    position: relative;
+    padding: 8px 9px;
+    z-index: 1;
+  }
+
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+}
