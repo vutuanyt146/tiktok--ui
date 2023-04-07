@@ -33,13 +33,7 @@ export const InboxIcon = ({ width = '3.2rem', height = '3.2rem', className }) =>
 );
 
 export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox='0 0 48 48'
-    fill='rgba(22, 24, 35, .34)'
-    xmlns='http://www.w3.org/2000/svg'
-  >
+  <svg width={width} height={height} viewBox='0 0 48 48' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
     <path
       fill-rule='evenodd'
       clip-rule='evenodd'
